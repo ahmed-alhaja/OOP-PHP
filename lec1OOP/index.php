@@ -15,19 +15,21 @@ class Product
     }
     function priceAfterDiscount(int $price, int $discount)
     {
-        return $this->$price -  ($price *  ($discount / 100));
+        return $price -  ($price *  ($discount / 100));
     }
     function getFinalPrice(int $price, int  $tax)
     {
-        return $this->$price +  ($price *  ($tax / 100));
+        return $price +  ($price *  ($tax / 100));
     }
 }
 // echo Product::priceAfterDiscount(10);
 $product = new Product;
-$product->name = 'ahmed';
-$product->price = 2000;
-$product->brand = 'Zara';
-$product->description = 'Zara';
+echo $product->name = 'ahmed' . "<br>";
+$price = $product->price = 2000;
+// echo $price;
+echo $product->brand = 'Zara' . "<br>";
+echo $product->description = 'Hallo Ahmed, willkommen auf meiner Website! Ich wünsche dir alles Gute. 😊' . "<br>";
 $product->tax = 2;
-$priceAfterDiscount = $product->priceAfterDiscount(500, 10);
-echo $product->priceAfterDiscount($priceAfterDiscount, $product->tax);
+echo $priceAfterDiscount = $product->priceAfterDiscount($price, 10);
+echo "<br>";
+echo $product->getFinalPrice($product->price, $product->tax);
