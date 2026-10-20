@@ -3,19 +3,21 @@
 class Product
 {
     public $name;
-    public $price;
+    private $price;
     public $description;
-    public $image;
+    private $image;
 
     public function uploadImage($image)
     {
-        $this->image = $image;
+        return $this->image = $image;
     }
-    public function caLcPrice($price)
+    public function caLcPrice(float $price)
     {
-      //
+        return $this->price = $price;
     }
 }
-// $product1 = new Product;
-// $product1->name = 'ahmed';
-// echo $product1->name;
+$product1 = new Product;
+$product1->name = 'ahmed';
+echo $product1->caLcPrice(398.6);
+echo "<br>";
+echo $product1->name;
