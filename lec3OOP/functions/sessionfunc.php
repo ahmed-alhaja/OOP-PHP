@@ -24,7 +24,10 @@ class Session
     {
         session_destroy();
     }
-    static function getAll() {}
+    static function getAll() 
+    {
+        return $_SESSION;
+    }
     static function check() {}
 }
 
